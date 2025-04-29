@@ -1,0 +1,144 @@
+:root{
+    --primary-color: #EE4D2D;
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --border-color: #dbdbdb;
+    --header-sort-bar-height: 46px;
+    --header-height: 120px;
+    --navbar-height: 34px;
+    --header-with-search: calc(var(--header-height) - var(--navbar-height));
+}
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: "Roboto", sans-serif;
+    box-sizing: inherit;
+}
+
+
+
+
+
+/* Animation */
+
+@keyframes ShowIn{
+    from    {
+        opacity: 0;
+    }
+    to  {
+        opacity: 1;
+    }
+}
+
+
+/* Modal login */
+
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+}
+.modal__overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.479);
+
+}
+.modal__body{
+    width: 500px;
+    height: 450px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* button style */
+
+.btn{
+    background-color: var(--white-color);
+    min-width: 124px;
+    height: 34px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    padding: 0 12px;
+    outline: none;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.6rem;
+    box-shadow: 0 4px 20px #c2c0c0;
+
+}
+
+.btn.btn--normal:hover{
+    background-color: #e4e4e4;
+
+}
+.btn.btn--primary{
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    box-shadow: 0 4px 20px #c2c0c0;
+
+
+}
+
+.btn.btn--disabled{
+    background-color: #9c9c9cab;
+    color: #ffffffad;
+    cursor: default;
+}
+
+.btn--size-s{
+    height: 32px;
+    font-size: 12px;
+    padding: 0 8px;
+}
+
+
+/* thanh chuyển trang */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.pagination-item {
+    list-style: none;
+    margin: 0 4px;
+    border-radius: 3px;
+
+}
+
+.pagination-item--Active {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+.pagination-item--Active  .pagination-item__link:hover{
+    background-color: #fc6b4e;
+}
+.pagination-item__link {
+    display: block;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    min-width: 40px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 3px;
+}
+
+
